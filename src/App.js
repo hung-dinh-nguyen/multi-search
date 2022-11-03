@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react'; 
-import Search from './search'
+import Search from './components/search/search'
 
 
 class App extends React.Component{
@@ -24,14 +24,16 @@ class App extends React.Component{
     const google = 'https://www.google.com/search?q=';
     
     let input = this.state.input;
-    var topics = input.split('/n'); 
+    var topics = input.split('\n'); 
+    var searches = [];
 
     topics.forEach(topic => {
       topic = google + topic;
       topic = encodeURI(topic) 
+      searches.push(topic)
     });
 
-    console.log(topics) 
+    console.log(searches) 
   
   };
 
