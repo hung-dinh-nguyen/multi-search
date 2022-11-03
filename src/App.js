@@ -28,13 +28,8 @@ class App extends React.Component{
     var searches = [];
 
     topics.forEach(topic => {
-      topic = google + topic;
-      topic = encodeURI(topic) 
-      searches.push(topic)
+      window.open(encodeURI(google + topic))
     });
-
-    console.log(searches) 
-  
   };
 
   render() {
