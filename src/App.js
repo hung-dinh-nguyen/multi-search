@@ -24,9 +24,10 @@ class App extends React.Component{
     
     let input = this.state.input;
     var topics = input.split('\n'); 
+    console.log(topics)
 
     topics.forEach(topic => {
-      window.open(encodeURI(google + topic))
+      window.open(google + encodeURIComponent(topic));
     });
   };
 
