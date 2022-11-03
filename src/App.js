@@ -20,12 +20,10 @@ class App extends React.Component{
   }
 
   onClick() {
-    const re_url = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(:[0-9]+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/ig;
     const google = 'https://www.google.com/search?q=';
     
     let input = this.state.input;
     var topics = input.split('\n'); 
-    var searches = [];
 
     topics.forEach(topic => {
       window.open(encodeURI(google + topic))
