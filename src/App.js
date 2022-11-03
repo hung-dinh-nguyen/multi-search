@@ -1,25 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'; 
+import Search from './search'
 
-function App() {
-  return (
+
+class App extends React.Component{
+  constructor(props) {
+      super(props); 
+      this.state = {
+        input: 'Enter Topics Here',
+      }
+      this.handleChange = this.handleChange.bind(this);
+      this.onClick = this.onClick.bind(this); 
+  }
+
+  handleChange(e) {
+    this.setState({
+        input: e.target.value
+    }); 
+  }
+
+
+  render() {
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="intro">
+          <h1>Multi-Search</h1>
+            <p>Tool to Perform Multiple Google Searches at Once!</p>
+          <div className="instructions">
+            <h2>Instructions</h2>
+              <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ol>
+          </div>
+        </div>
+
+        <Search
+          input={this.state.input} 
+          onChange={this.handleChange} 
+          onClick={this.onClick}
+        />
     </div>
-  );
+    );
+  }
 }
 
 export default App;
