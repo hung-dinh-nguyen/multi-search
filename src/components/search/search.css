@@ -1,0 +1,15 @@
+.search-div {
+    justify-content: center;
+}
+
+.search-text {
+    display: block;
+    margin: auto;
+    height: 250px;
+    width: 50%;
+}
+
+.search-button {
+    margin-top: 5px;
+    width: 25%;
+}

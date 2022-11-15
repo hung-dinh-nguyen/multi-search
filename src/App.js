@@ -40,11 +40,9 @@ class App extends React.Component{
           <div className="instructions">
             <h2>Instructions</h2>
               <ol>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Enter one topic per line</li>
+                <li>Make sure to allow pop-ups and redirects for this site</li>
+                <li>Click on "SEARCH" to perform the Google searches</li>
               </ol>
           </div>
         </div>
